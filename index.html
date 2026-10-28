@@ -1820,7 +1820,9 @@
               voteBtn.disabled = false;
               voteBtn.textContent = "Rösta!";
               voterNote.textContent =
-                "Kunde inte spara rösten just nu. Försök igen.";
+                "Kunde inte spara rösten just nu. Försök igen. (" +
+                ((err && (err.code || err.message)) || "okänt fel") +
+                ")";
               voterNote.hidden = false;
             });
         });
